@@ -5,3 +5,10 @@
     <li><%= link_to task_list.title, "/task_lists/#{task_list.id}" %></li>
   <% end %>
 </ul>
+
+<h1> OR without link_to</h1>
+<ul>
+  <% @task_lists.each do |task_list| %>
+    <li><a href="/task_lists/#{task_list.id}"><%= link_to task_list.title %></a></li>
+  <% end %>
+</ul>
